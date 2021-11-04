@@ -22,6 +22,8 @@ const basicGame = {
 		this.createElements()
 		this.drawElements()
 		this.start()
+		this.resetScoreCounter()
+		this.resetRecord()
 		
 	},
 
@@ -372,6 +374,10 @@ const basicGame = {
 		document.querySelector('#score').textContent = this.score
 	},
 
+	resetRecord() {
+		document.querySelector('#best-score').textContent = 0
+	},
+
 
 	resetBall() {
 
@@ -390,6 +396,8 @@ const basicGame = {
 			document.querySelector('#main-menu').removeAttribute('class', 'hide')
 			document.querySelector('#home-btn').setAttribute('class', 'hide')
 			document.querySelector('#game-board').setAttribute('class', 'hide')
+			document.querySelector('#score').setAttribute('class','hide')
+			document.querySelector('#best-score').setAttribute('class','hide')
 		}
 	},
 

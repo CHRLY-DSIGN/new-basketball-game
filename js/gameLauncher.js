@@ -18,6 +18,8 @@ window.onload = function() {
         document.querySelector('#main-menu').setAttribute('class', 'hide')
         document.querySelector('#game-board').removeAttribute('class', 'hide')
         document.querySelector('#home-btn').removeAttribute('class', 'hide')
+        document.querySelector('#score').removeAttribute('class','hide')
+		document.querySelector('#best-score').removeAttribute('class','hide')
         basicGame.init()
     }
 }
