@@ -76,6 +76,8 @@ class Ball {
 		this.angle = res.angle
 		let timeElapsed = res.timeElapsed
 		this.speed = this.hipo / timeElapsed
+		
+		this.player.playerShoot = true
 
 		this.update()
 		//console.log("shoooteado", this.angle, this.speed);
@@ -135,6 +137,8 @@ class Ball {
 		
 		/* this.image = new Image()
 		this.image.src = '../IMAGES/BASKETBAL_BALL_SPRITE_189.png' */
+
+		console.log(this.spritePosX)
 
 		this.ctx.drawImage(
 			this.image, 

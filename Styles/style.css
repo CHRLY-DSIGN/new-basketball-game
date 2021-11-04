@@ -129,7 +129,7 @@
 #main-menu-btn {
     position: absolute;
     padding: 20px 122px;
-    background-color: rgba(96, 102, 131, 0.438);
+    background-color: rgba(130, 138, 179, 0.438);
     top: 600px;
     left: 240px;
     z-index: 1000;
@@ -167,6 +167,31 @@
     cursor: pointer;
     background-color:rgba(185, 186, 197, 0.815);
     opacity: 1;
+}
+
+
+#main-menu-btn2 {
+    position: absolute;
+    padding: 20px 141px;
+    background-color: rgba(130, 138, 179, 0.438);
+    top: 680px;
+    left: 240px;
+    z-index: 1000;
+    border-radius: 6px;
+    font-weight: 600;
+    color: rgba(224, 230, 238, 0.76);
+}
+
+#main-menu-btn2 h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+
+}
+
+#main-menu-btn2:hover {
+    background-color: rgba(221, 223, 231, 0.315);
+    cursor: pointer;
+    color: rgb(58, 58, 61);
 }
 
 

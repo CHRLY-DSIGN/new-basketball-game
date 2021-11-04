@@ -14,6 +14,7 @@ const basicGame = {
 	score: 0,
 	scoreRecords: [],
 	bestScore : undefined,
+	hasScored: false,
 
 	init() {
 		this.setContext()
@@ -48,6 +49,7 @@ const basicGame = {
 
 			if (this.ball.isShooted) {
 				console.log("BALL IS SHOOTED FUNCTION ------------------")
+				this.player.playerShoot = true
 				if (this.collided) {
 					this.animateCollisionFloor()
 				} else if (this.collidedBoard){
@@ -67,26 +69,27 @@ const basicGame = {
 			if (this.isCollisionBoard()) {
 				//console.log('collision board')
 				this.collidedBoard = true
-				this.resetScoreCounter()
+				if (!this.hasScored) this.resetScoreCounter()
 				
 			}
 
 			if (this.isCollisionBasketLeft()) {
 				//console.log('collision basket left')
 				this.collidedBasketLeft = true
-				this.resetScoreCounter()
+				if (!this.hasScored)  this.resetScoreCounter()
 			}
 
 			if (this.isCollisionBasketRight()) {
 				//console.log('GOAAAAAAALLLLLL ---------------------')
 				//console.log("llegnado ponsicion score");
+				this.hasScored = true
 				this.scoreCounter()
 			} 
 
 			if (this.isCollisionFloor()) {
 				this.collided = true
 				//console.log('collision floor')
-				this.resetScoreCounter()
+				if (!this.hasScored) this.resetScoreCounter()
 			}
 
 
@@ -96,6 +99,8 @@ const basicGame = {
 				//basicGame.init();
 
 				this.resetBall();
+				this.hasScored = false
+				this.player.playerShoot = false
 				
 			}
 
