@@ -50,6 +50,7 @@ const basicGame = {
 			if (this.ball.isShooted) {
 				
 				this.player.playerShoot = true
+
 				if (this.collided) {
 					this.animateCollisionFloor()
 				} else if (this.collidedBoard){
@@ -83,6 +84,8 @@ const basicGame = {
 				//console.log('GOAAAAAAALLLLLL ---------------------')
 				//console.log("llegnado ponsicion score");
 				this.hasScored = true
+				this.net.basketScored = true
+				basicGame.net.isAnimationFinished = false
 				this.scoreCounter()
 			} 
 
@@ -101,6 +104,7 @@ const basicGame = {
 				this.resetBall();
 				this.hasScored = false
 				this.player.playerShoot = false
+				this.net.basketScored = false
 				
 			}
 

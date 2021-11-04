@@ -13,10 +13,10 @@ class Player {
           height: height
         }
 
+        this.image = undefined
+        
         this.playerShoot = false,
         this.spritePosX = 0
-        this.image = undefined
-
         this.sprite = undefined
         this.isAnimationFinished = false
         this.startGame()
