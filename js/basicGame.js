@@ -97,6 +97,8 @@ const basicGame = {
 				
 			}
 
+			this.goHome()
+
 
 		}, 1000 / this.FPS)
 		this.framesCounter > 50 ? clearInterval(this.intervalId) : null
@@ -380,6 +382,15 @@ const basicGame = {
 		this.ballBounceAnimation = undefined
 		this.createBall()
 
+	},
+
+
+	goHome() {
+		document.getElementById("home-btn").onclick = function(){
+			document.querySelector('#main-menu').removeAttribute('class', 'hide')
+			document.querySelector('#home-btn').setAttribute('class', 'hide')
+			document.querySelector('#game-board').setAttribute('class', 'hide')
+		}
 	},
 
 

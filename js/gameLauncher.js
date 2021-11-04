@@ -16,6 +16,8 @@ window.onload = function() {
 
     document.getElementById("play-btn").onclick = function() {
         document.querySelector('#main-menu').setAttribute('class', 'hide')
+        document.querySelector('#game-board').removeAttribute('class', 'hide')
+        document.querySelector('#home-btn').removeAttribute('class', 'hide')
         basicGame.init()
     }
 }

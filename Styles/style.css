@@ -145,9 +145,28 @@
 }
 
 #main-menu-btn:hover {
-    background-color: rgba(221, 227, 231, 0.466);
+    background-color: rgba(221, 223, 231, 0.315);
     cursor: pointer;
     color: rgb(58, 58, 61);
+}
+
+#home-btn {
+    position: absolute;
+    background-color: rgba(185, 186, 197, 0.151);
+    width: 16px;
+    left: 72px;
+    top: 330px;
+    z-index: 5000;
+    padding: 16px;
+    border-radius: 30%;
+    opacity: 0.5;
+}
+
+
+#home-btn:hover {
+    cursor: pointer;
+    background-color:rgba(185, 186, 197, 0.815);
+    opacity: 1;
 }
 
 
