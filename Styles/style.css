@@ -34,6 +34,8 @@
     left: 350px;
     top: 100px;
     z-index: 1000;
+    padding: 0px;
+    margin: 0px;
 }
 
 #launcher-menu {
@@ -41,6 +43,7 @@
     height: 936px;
     padding: 0px;
     margin: 0px;
+    position: absolute;
 }
 
 
@@ -97,7 +100,7 @@
     padding: 0px;
     margin: 0px;
     position: absolute;
-    left: 8px;
+    left: 5px;
     /* background-image: url('../IMAGES/basketball_game_main_menu.jpg'); */
 }
 
@@ -195,4 +198,32 @@
 }
 
 
+#how-to-play {
+    width: 1664px;
+    height: 936px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 6000;
+    position: absolute;
+    left: 5px;
+}
 
+
+#back-btn {
+    position: absolute;
+    padding: 20px 30px 20px 50px;
+    background-color: rgb(252, 0, 63);
+    top: 50px;
+    left: 0px;
+    z-index: 7000;
+    border-radius: 0px 16px 16px 0px;
+    font-weight: 600;
+    color: rgb(244, 245, 250);
+    width: 80px;
+}
+
+
+#back-btn:hover {
+    cursor: pointer;
+    background-color: rgb(0, 47, 255);
+}

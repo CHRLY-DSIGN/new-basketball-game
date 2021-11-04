@@ -13,6 +13,16 @@ window.onload = function() {
         
         
     }
+    
+    document.getElementById("main-menu-btn2").onclick = function(){
+        document.querySelector('#how-to-play').removeAttribute('class', 'hide')
+    }	
+    
+    
+    document.getElementById("back-btn").onclick = function(){
+        document.querySelector('#how-to-play').setAttribute('class', 'hide')
+    }
+
 
     document.getElementById("play-btn").onclick = function() {
         document.querySelector('#main-menu').setAttribute('class', 'hide')
@@ -22,5 +32,8 @@ window.onload = function() {
 		document.querySelector('#best-score').removeAttribute('class','hide')
         basicGame.init()
     }
+
+
+	
 }
 
