@@ -55,8 +55,10 @@ const basicGame = {
 					this.animateCollisionFloor()
 				} else if (this.collidedBoard){
 					this.animationCollisionBoard()
+					basketBoardImpact.play()
 				} else if (this.collidedBasketLeft){
 					this.animationCollisionBasketLeft()
+					basketRimImpact.play()
 				} else {
 					this.ball.update()
 				}
@@ -86,11 +88,12 @@ const basicGame = {
 				this.hasScored = true
 				this.net.basketScored = true
 				basicGame.net.isAnimationFinished = false
+				netScoreSound.play()
 				this.scoreCounter()
 			} 
 
 			if (this.isCollisionFloor()) {
-				this.collided = true
+				this.collided = true				
 				//console.log('collision floor')
 				if (!this.hasScored) this.resetScoreCounter()
 			}
@@ -306,6 +309,7 @@ const basicGame = {
 
 	createBounceAnimationBall(actualX,actualY,actualRadios) {
 		this.ballBounceAnimation = new Ball(this.canvasDOM, this.ctx, actualX, actualY, actualRadios)
+		ballBounceSound.play()
 
 	},
 
