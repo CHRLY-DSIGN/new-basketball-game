@@ -48,7 +48,7 @@ const basicGame = {
 			this.drawElements()
 
 			if (this.ball.isShooted) {
-				console.log("BALL IS SHOOTED FUNCTION ------------------")
+				
 				this.player.playerShoot = true
 				if (this.collided) {
 					this.animateCollisionFloor()
@@ -69,14 +69,14 @@ const basicGame = {
 			if (this.isCollisionBoard()) {
 				//console.log('collision board')
 				this.collidedBoard = true
-				if (!this.hasScored) this.resetScoreCounter()
+				//if (!this.hasScored) this.resetScoreCounter()
 				
 			}
 
 			if (this.isCollisionBasketLeft()) {
 				//console.log('collision basket left')
 				this.collidedBasketLeft = true
-				if (!this.hasScored)  this.resetScoreCounter()
+				//if (!this.hasScored)  this.resetScoreCounter()
 			}
 
 			if (this.isCollisionBasketRight()) {

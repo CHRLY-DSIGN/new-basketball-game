@@ -31,7 +31,7 @@ class Shooter {
 		this.isHeld = false
 		this.isDroped = true
 		clearInterval(this.timerId)
-	
+		basicGame.player.isAnimationFinished = false
 
 		this.posEnd = { x: e.x, y: e.y }
 	
