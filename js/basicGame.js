@@ -12,6 +12,8 @@ const basicGame = {
 	collidedBoard: false,
 	collidedBasketLeft: false,
 	score: 0,
+	scoreRecords: [],
+	bestScore : undefined,
 
 	init() {
 		this.setContext()
@@ -61,25 +63,28 @@ const basicGame = {
 			this.drawNet()
 
 			if (this.isCollisionBoard()) {
-				console.log('collision board')
+				//console.log('collision board')
 				this.collidedBoard = true
+				this.resetScoreCounter()
 				
 			}
 
 			if (this.isCollisionBasketLeft()) {
-				console.log('collision basket left')
+				//console.log('collision basket left')
 				this.collidedBasketLeft = true
+				this.resetScoreCounter()
 			}
 
 			if (this.isCollisionBasketRight()) {
-				console.log('GOAAAAAAALLLLLL ---------------------')
-				console.log("llegnado ponsicion score");
+				//console.log('GOAAAAAAALLLLLL ---------------------')
+				//console.log("llegnado ponsicion score");
 				this.scoreCounter()
 			} 
 
 			if (this.isCollisionFloor()) {
 				this.collided = true
-				console.log('collision floor')
+				//console.log('collision floor')
+				this.resetScoreCounter()
 			}
 
 
@@ -346,11 +351,19 @@ const basicGame = {
 
 	scoreCounter() {
 		this.score++
+		this.scoreRecords.push(this.score)
+		this.bestScore = this.getRecord(this.scoreRecords)
 		document.querySelector('#score').textContent = this.score
-		document.querySelector('#best-score').textContent = this.score
+		document.querySelector('#best-score').textContent = this.bestScore
 		console.log(this.score);
 
 	},
+
+
+	getRecord(someArray){
+		return Math.max.apply(null, someArray);
+	},
+
 
 	resetScoreCounter() {
 		this.score = 0
