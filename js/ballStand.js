@@ -22,7 +22,7 @@ class BallStand {
       startGame() {
     
         this.image = new Image();
-        this.image.src = '../IMAGES/basketball_game_background_ball_stand.png';
+        this.image.src = 'IMAGES/basketball_game_background_ball_stand.png';
       }
 
 

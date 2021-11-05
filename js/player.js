@@ -26,10 +26,10 @@ class Player {
       startGame() {
     
         this.image = new Image();
-        this.image.src = '../IMAGES/basketball_game_background_player.png';
+        this.image.src = 'IMAGES/basketball_game_background_player.png';
 
         this.sprite = new Image()
-		    this.sprite.src = '../IMAGES/basketball_game_player_sprite.png'
+		    this.sprite.src = 'IMAGES/basketball_game_player_sprite.png'
 
         if (!this.playerShoot) {
           this.spritePosX = 0

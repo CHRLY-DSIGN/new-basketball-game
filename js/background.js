@@ -19,7 +19,7 @@ class Background {
   
     startGame() {
         this.image = new Image()
-        this.image.src = '../IMAGES/basketball_game_background_base.jpg'
+        this.image.src = 'IMAGES/basketball_game_background_base.jpg'
     }
   
     draw() {

@@ -21,7 +21,7 @@ class Scoreboard {
     
       startGame() {
         this.image = new Image()
-        this.image.src = '../IMAGES/basketball_game_scoreboard.png'
+        this.image.src = 'IMAGES/basketball_game_scoreboard.png'
       }
     
     

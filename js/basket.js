@@ -21,7 +21,7 @@ class BasketStandar {
     
       startGame() {
         this.image = new Image()
-        this.image.src = '../IMAGES/basketball_game_background_basket.png'
+        this.image.src = 'IMAGES/basketball_game_background_basket.png'
       }
     
     

@@ -51,7 +51,7 @@ class Ball {
 		this.image.src = '../IMAGES/basketball_game_ball.png' */
 
 		this.image = new Image()
-		this.image.src = '../IMAGES/BASKETBAL_BALL_SPRITE_189.png'
+		this.image.src = 'IMAGES/BASKETBAL_BALL_SPRITE_189.png'
 
 		if (!this.isShooted) {
 			this.spritePosX = 0

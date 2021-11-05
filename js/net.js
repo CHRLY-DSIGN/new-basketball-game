@@ -26,10 +26,10 @@ class Net {
     
       startGame() {
         this.image = new Image()
-        this.image.src = '../IMAGES/basketball_game_background_basket_net.png'
+        this.image.src = 'IMAGES/basketball_game_background_basket_net.png'
 
         this.sprite = new Image()
-		    this.sprite.src = '../IMAGES/basketball_game_net_sprite.png'
+		    this.sprite.src = 'IMAGES/basketball_game_net_sprite.png'
 
         if (!this.basketScored) {
           this.spritePosX = 0
